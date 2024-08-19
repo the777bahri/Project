@@ -1,4 +1,5 @@
 Reinforcement Learning Project
+
 This project uses Python, PyBullet, and Stable-Baselines3 for training an agent to learn various tasks.
 
 Installation
