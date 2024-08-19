@@ -1,71 +1,57 @@
 Reinforcement Learning Project
 
-This project uses Python, PyBullet, and Stable-Baselines3 for training an agent to learn various tasks.
-
 Installation
 Prerequisites
-Python 3.10 (recommended to use Anaconda)
-Visual Studio Code or another IDE
+• Python 3.10 (recommended to use Anaconda)
+• Visual Studio Code or another IDE
 Setting Up the Environment
-Install Anaconda:
+1. Install Anaconda:
+   • Download and install Anaconda from https://www.anaconda.com/products/distribution.
 
-Download and install Anaconda from here.
-Create a New Conda Environment:
+2. Create a New Conda Environment:
+   Open Anaconda Prompt and create a new environment:
 
-Open Anaconda Prompt and create a new environment:
+   conda create -n rl_env python=3.10
 
-lua
-Copy code
-conda create -n rl_env python=3.10
-Activate the environment:
+   Activate the environment:
 
-Copy code
-conda activate rl_env
+   conda activate rl_env
 Installing Dependencies
-Upgrade Pip and Setuptools:
+1. Upgrade Pip and Setuptools:
 
-css
-Copy code
-pip install --upgrade pip setuptools
-Install PyTorch:
+   pip install --upgrade pip setuptools
 
-For the CPU version:
+2. Install PyTorch:
 
-perl
-Copy code
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
-Install Stable-Baselines3:
+   For the CPU version:
 
-Copy code
-pip install stable-baselines3
-Install Additional Dependencies:
+   pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
 
-rust
-Copy code
-pip install pybullet numpy
+3. Install Stable-Baselines3:
+
+   pip install stable-baselines3
+
+4. Install Additional Dependencies:
+
+   pip install pybullet numpy
 Usage
 To run your training script, use the following command:
 
-Copy code
-python your_script.py
-Replace your_script.py with the name of your Python file.
+   python your_script.py
 
+Replace your_script.py with the name of your Python file.
 Stopping and Saving the Model
 To manually stop and save the model:
 
-Press Ctrl + C in the terminal to stop the training.
+1. Press Ctrl + C in the terminal to stop the training.
+2. Make sure your script handles saving the model:
 
-Make sure your script handles saving the model:
+   model.save("path_to_save_model/model_name")
 
-python
-Copy code
-model.save("path_to_save_model/model_name")
 Load the model later with:
 
-python
-Copy code
-model = PPO.load("path_to_save_model/model_name")
+   model = PPO.load("path_to_save_model/model_name")
 Troubleshooting
 Common Issues
-ModuleNotFoundError: Ensure all dependencies are installed in your activated environment.
-Dependency Conflicts: If you face issues, try creating a new virtual environment and reinstalling the dependencies.
+• ModuleNotFoundError: Ensure all dependencies are installed in your activated environment.
+• Dependency Conflicts: If you face issues, try creating a new virtual environment and reinstalling the dependencies.
